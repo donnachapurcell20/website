@@ -8,102 +8,24 @@
 </head>
 <body>
 
-    <div class="w3-half w3-blue-grey w3-container" style="height:700px">
-        <div class="w3-padding-64 w3-center">
-            <h1>About Me</h1>
-            <img src="/w3images/avatar3.png" class="w3-margin w3-circle" alt="Person" style="width:50%">
-            <div class="w3-left-align w3-padding-large">
-                <p>I am an aspiring Software Engineer, I have a Bachelor of Science in Software Design with Cloud Computing.</p>
-                <p>While programming is one of my main passions, I also enjoy gaming and rugby.</p>
+     <!-- Header Section with Photo and About Me -->
+     <header class="header-section">
+        <div class="about-me">
+            <div class="profile-photo">
+                <img src="images/profile.jpg" alt="Your Photo">
             </div>
+            
+            <div class="about-me-text">
+                <h1>About Me</h1>
+                <p>I am an aspiring Software Engineer, I have a Bachelor of Science in Software Design with Cloud Computing. While programming is one of my main passions, I also enjoy gaming and rugby.</p>
+            </div>
+            
         </div>
-    </div>
+    </header>
 
-    <div class="container">
-        <div class="w3-row-padding w3-center w3-margin-top">
-            <div class="w3-third">
-                <div class="w3-card">
-                    <h3>Languages I speak</h3>
-                    <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-                    <p>Java</p>
-                    <p>JavaScript</p>
-                    <p>PHP</p>
-                    <p>C#</p>
-                    <p>C++</p>
-                    <p>Python</p>
-                    <p>HTML</p>
-                    <p>mySQL</p>
-                </div>
-            </div>
 
-            <div class="w3-third">
-                <div class="w3-card">
-                    <h3>Responsive</h3>
-                    <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-                    <p>Built-in responsiveness</p>
-                    <p>Mobile first fluid grid</p>
-                    <p>Fits any screen sizes</p>
-                    <p>PC Tablet and Mobile</p>
-                </div>
-            </div>
 
-            <div class="w3-third">
-                <div class="w3-card">
-                    <h3>Integrated Development Environments</h3>
-                    <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-                    <p>Visual Studio Code</p>
-                    <p>IntelliJ IDEA</p>
-                    <p>Eclipse</p>
-                    <p>PC Tablet and Mobile</p>
-                </div>
-            </div>
 
-            <div class="w3-third">
-                <div class="w3-card">
-                    <h3>Integrated Development Environments</h3>
-                    <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-                    <p>Visual Studio Code</p>
-                    <p>IntelliJ IDEA</p>
-                    <p>Eclipse</p>
-                    <p>PC Tablet and Mobile</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Project Section -->
-    <div class="w3-container w3-padding-32" id="projects">
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">My Projects</h3>
-        
-        <div class="w3-row-padding">
-            <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-display-container">
-                    <div class="w3-display-topleft w3-black w3-padding">Rugby Pro 14 App</div>
-                    <p class="w3-small">A mobile app I created in my second year of college which had four functionalities bottom navigation bar, pop out, login, and card view</p>
-                </div>
-            </div>
-            <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-display-container">
-                    <div class="w3-display-topleft w3-black w3-padding">JDBC Project</div>
-                    <p class="w3-small">A project created using Java and MYSQL using database and a table on video games using CRUD operations.</p>
-                </div>
-            </div>
-            <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-display-container">
-                    <div class="w3-display-topleft w3-black w3-padding">SongSearcher</div>
-                    <p class="w3-small">An app that uses React for the Front-End and Python(Flask) for the backend. It allows users to discover songs and artists using Spotify and YouTube API's, providing both tracks and related videos.</p>
-                </div>
-            </div>
-            <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-display-container">
-                    <div class="w3-display-topleft w3-black w3-padding">Destination A Route Planner App</div>
-                    <!-- Summary -->
-                    <p class="w3-small">A route planner application that helps users plan their travel routes efficiently.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-  
     <!-- Card Flip Section -->
     <div class="w3-container w3-padding-32">
         <h1>Card Flip with Text</h1>
@@ -112,16 +34,68 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+                    <img src="images/Song_Searcher_Logo.png" alt="Avatar" style="width:300px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>John Doe</h1> 
-                    <p>Architect & Engineer</p> 
-                    <p>We love that guy</p>
+                    <h1>SongSearcher</h1> 
+                    <p>It allows users to discover songs and</p>
+                    <p>artists using Spotify and YouTube API's,</p>
+                    <p>providing both tracks and related videos.</p>
                 </div>
             </div>
         </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="images/Destination_Route_Planner_App.png" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Destination: A Route Planner App</h1> 
+                    <p>A route planner app that helps users </p> 
+                    <P>plan their travel routes efficiently.</P>
+                    <p>Users can contribute to road safety</p>
+                    <p>by adding helpful markers to the map</p>
+                    <p>for other users.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="images/JDBC_Project.PNG" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>JDBC Project</h1> 
+                    <p>A project I created using Java and</p> 
+                    <P>MySQL, using a database named vgames, and a table called videogames.</P>
+                    <p>This project used the CRUD operations.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="images/Pro_14.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Rugby Pro 14 App</h1> 
+                    <p>A mobile app I created</p> 
+                    <P>which has four functionalities</P>
+                    <p>bottom navigation bar, pop out,</p>
+                    <p>login, and card view.</p>
+                    <a href=""
+                </div>
+            </div>
+        </div>
+
+ 
+
     </div>
     <!-- End of Card Flip Section -->
+
+<script src="script.js"></script>
 </body>
 </html>
