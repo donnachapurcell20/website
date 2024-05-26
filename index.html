@@ -3,99 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <style>
+        .hero {
+            background-image: url('background.jpg');
+            background-size: cover;
+            color: white;
+        }
+        .hero .hero-body {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .project img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
-
-     <!-- Header Section with Photo and About Me -->
-     <header class="header-section">
-        <div class="about-me">
-            <div class="profile-photo">
-                <img src="images/profile.jpg" alt="Your Photo">
+    <!-- Header -->
+    <section class="hero is-dark is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">
+                    Donnacha Purcell
+                </h1>
+                <h2 class="subtitle">
+                    Software Engineer
+                </h2>
             </div>
-            
-            <div class="about-me-text">
-                <h1>About Me</h1>
-                <p>I am an aspiring Software Engineer, I have a Bachelor of Science in Software Design with Cloud Computing. While programming is one of my main passions, I also enjoy gaming and rugby.</p>
-            </div>
-            
         </div>
-    </header>
+    </section>
 
-
-
-
-    <!-- Card Flip Section -->
-    <div class="w3-container w3-padding-32">
-        <h1>Card Flip with Text</h1>
-        <h3>Hover over the image below:</h3>
-
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="images/Song_Searcher_Logo.png" alt="Avatar" style="width:300px;height:300px;">
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half">
+                    <h3 class="title is-3">About Me</h3>
+                    <p>
+                        Hello! I'm Donnacha Purcell, a passionate software engineer with a strong foundation in computer science, thanks to my degree from The Technological University of the Shannon: Midlands Midwest. With a keen eye for detail and a love for coding, I thrive on solving complex problems and working on innovative projects that push the boundaries of what's possible. When I'm not writing code, you can find me on the rugby pitch, where I enjoy the camaraderie and physical challenge of the sport. I'm also an avid gamer, always on the lookout for the next great adventure or strategy to conquer. With a unique blend of technical expertise, creativity, and enthusiasm, I'm excited to take on new challenges and make a meaningful impact in the world of software development.
+                    </p>
                 </div>
-                <div class="flip-card-back">
-                    <h1>SongSearcher</h1> 
-                    <p>It allows users to discover songs and</p>
-                    <p>artists using Spotify and YouTube API's,</p>
-                    <p>providing both tracks and related videos.</p>
+                <div class="column is-half">
+                    <img src="images/profile.jpg" alt="Profile Image">
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="images/Destination_Route_Planner_App.png" alt="Avatar" style="width:300px;height:300px;">
+    <!-- Skills Section -->
+    <section class="section has-background-light">
+        <div class="container">
+            <h3 class="title is-3">Languages I speak</h3>
+            <div class="columns is-multiline">
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h4 class="title is-5">Python</h4>
+                        <figure class="image">
+                            <img src="images/python.png" alt="python">
+                        </figure>
+                    </div>
                 </div>
-                <div class="flip-card-back">
-                    <h1>Destination: A Route Planner App</h1> 
-                    <p>A route planner app that helps users </p> 
-                    <P>plan their travel routes efficiently.</P>
-                    <p>Users can contribute to road safety</p>
-                    <p>by adding helpful markers to the map</p>
-                    <p>for other users.</p>
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h4 class="title is-5">C++</h4>
+                        <figure class="image">
+                            <img src="images/cplus.png" alt="c++">
+                        </figure>
+                        
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h4 class="title is-5">C#</h4>
+                        <figure class="image">
+                            <img src="images/csharp.png" alt="c#">
+                        </figure>
+                        
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h4 class="title is-5">Java</h4>
+                        <figure class="image">
+                            <img src="images/java.png" alt="java">
+                        </figure>
+                        
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h4 class="title is-5">JavaScript</h4>
+                        <figure class="image">
+                            <img src="images/javascript.png" alt="javascript">
+                        </figure>
+                        
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h4 class="title is-5">PHP</h4>
+                        <figure class="image">
+                            <img src="images/php.png" alt="php">
+                        </figure>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h4 class="title is-5">SQL</h4>
+                        <figure class="image">
+                            <img src="images/sql.png" alt="sql">
+                        </figure>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h4 class="title is-5">REACT</h4>
+                        <figure class="image">
+                            <img src="images/react.png" alt="react">
+                        </figure>
+                    </div>
+                </div>
+                <!-- Add more skills as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section">
+        <div class="container">
+            <h3 class="title is-3">Projects</h3>
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <a href="https://youtu.be/5n019Hh3bL4?si=N_PQZGEskH5qDSlg" target="_blank">
+                        <div class="box project">
+                            <h4 class="title is-5">Destination A Route Planner App</h4>
+                            <figure class="image">
+                                <img src="images/destination.png" alt="Project One">
+                            </figure>
+                            <p>
+                                A route planner app that was creating using Java in Android Studio IDE. This app allows users to input the starting and end locations, provide route suggestions, display speed van and speed camera locations across Ireland, and offer direction. users could activiely contribute to the app by adding markers, provind valuable input to improve the user experience. These markers, categorised as "accident", "construction", "speed van", or "speed camera", which were seamlessly integrated into the apps and stored on Firebase Cloud, further enhancing its functionality.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-half">
+                    <a href="https://youtu.be/f2TaTWY8bTc?si=ahiWsZKAwuQwiycT" target="_blank">
+                        <div class="box project">
+                            <h4 class="title is-5">SongSeacher</h4>
+                            <figure class="image">
+                                <img src="images/songsearcher.png" alt="Project Two">
+                            </figure>
+                            <p>
+                               This application leverages React for the frontend and Python, Flask for the backend. SongSearcher empowers users to search for their favourite songs and artists using both the Spotify API and YouTube API. This innovative tool not only displays Spotify tracks but also offers music videos or videos related to te selected songs, creating a holistic musical experience for users. 
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-half">
+                    <a href="https://youtu.be/FaP18--2aJ8?si=c5OYmxgqnPQ3kvTr" target="_blank">
+                        <div class="box project">
+                            <h4 class="title is-5">Pro 14 Rugby App</h4>
+                            <figure class="image">
+                                <img src="images/pro14.png" alt="Project Two">
+                            </figure>
+                            <p>
+                                This app was created using Java and Android Studio IDE. It includes features such as splash view, web view, scroll view, basic list, easy button intents, vector asset, check box intent, radio button, visibility, sound switch, vector video, pass/receive text, and Java button.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-half">
+                    <a href="https://youtu.be/OUKTPnDLzgU?si=ScbOHp0geqc0bVHF" target="_blank">
+                        <div class="box project">
+                            <h4 class="title is-5">JDBC</h4>
+                            <figure class="image">
+                                <img src="images/JDBC.png" alt="Project Two">
+                            </figure>
+                            <p>
+                                This was an assignment that covered Java Database Connectivity (JDBC) API, which is a Java standard API for database-independent connectivity between the Java programming language and a wide range of databases.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section has-background-light">
+        <div class="container">
+            <h3 class="title is-3">Contact</h3>
+            <div class="columns">
+                <div class="column is-half">
+                    <h4 class="title is-4">Get in Touch</h4>
+                    <p>Phone: <a href="tel:+1234567890">+353 (087) 616 1934</a></p>
+                    <p>Email: <a href="mailto:your_email@example.com">donnachapurcell20@gmail.com</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/donnacha-purcell/" target="_blank">LinkedIn Profile</a></p>
+                    <p>GitHub: <a href="https://github.com/donnachapurcell20" target="_blank">GitHub Profile</a></p>
+                    <p>YouTube: <a href="https://www.youtube.com/channel/UCalerSdg8enAHzG9M1khfrg?sub_confirmation=1" target="_blank">YouTube Channel</a></p>
+                </div>
+                <div class="column is-half">
+                    <img src="images/profile.jpg">
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="images/JDBC_Project.PNG" alt="Avatar" style="width:300px;height:300px;">
-                </div>
-                <div class="flip-card-back">
-                    <h1>JDBC Project</h1> 
-                    <p>A project I created using Java and</p> 
-                    <P>MySQL, using a database named vgames, and a table called videogames.</P>
-                    <p>This project used the CRUD operations.</p>
-                </div>
-            </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Powered By:</strong> <span>My Bank Account</span>
+            </p>
         </div>
-
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="images/Pro_14.jpg" alt="Avatar" style="width:300px;height:300px;">
-                </div>
-                <div class="flip-card-back">
-                    <h1>Rugby Pro 14 App</h1> 
-                    <p>A mobile app I created</p> 
-                    <P>which has four functionalities</P>
-                    <p>bottom navigation bar, pop out,</p>
-                    <p>login, and card view.</p>
-                    <a href=""
-                </div>
-            </div>
-        </div>
-
- 
-
-    </div>
-    <!-- End of Card Flip Section -->
-
-<script src="script.js"></script>
+    </footer>
 </body>
 </html>
