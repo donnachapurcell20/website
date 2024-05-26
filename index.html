@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3s4Wz6iJgD/+ub2oU" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .hero {
             background-image: url('background.jpg');
@@ -13,30 +14,72 @@
         }
         .hero .hero-body {
             background-color: rgba(0, 0, 0, 0.5);
+            position: relative;
         }
         .project img {
             max-height: 200px;
             object-fit: cover;
         }
+
+        .scroll-down-arrow {
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
+}
+
+.scroll-down-arrow::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section {
+  transition: all 0.5s ease-out;
+}
     </style>
+
+    
 </head>
 <body>
     <!-- Header -->
     <section class="hero is-dark is-fullheight">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title">
-                    Donnacha Purcell
-                </h1>
-                <h2 class="subtitle">
-                    Software Engineer
-                </h2>
-            </div>
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">
+                Donnacha Purcell
+            </h1>
+            <h2 class="subtitle">
+                Software Engineer
+                <div class="mt-2">
+                    <a id="scroll-down-arrow" class="scroll-down-arrow" href="#about-section">
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+            </h2>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Navbar -->
+<nav class="navbar is-dark" id="about-section" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">Home</a>
+      <a class="navbar-item" href="#about">About</a>
+      <a class="navbar-item" href="#languages">Languages</a>
+      <a class="navbar-item" href="#projects">Projects</a>
+      <a class="navbar-item" href="#contact">Contact</a>
+    </div>
+  </nav>
 
     <!-- About Section -->
-    <section class="section">
+    <section  class="section" id="#about">
         <div class="container">
             <div class="columns">
                 <div class="column is-half">
@@ -53,7 +96,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="section has-background-light">
+    <section class="section has-background-light" id="languages">
         <div class="container">
             <h3 class="title is-3">Languages I speak</h3>
             <div class="columns is-multiline">
@@ -131,7 +174,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="section">
+    <section class="section" id="projects">
         <div class="container">
             <h3 class="title is-3">Projects</h3>
             <div class="columns is-multiline">
@@ -193,7 +236,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section has-background-light">
+    <section class="section has-background-light" id="contact">
         <div class="container">
             <h3 class="title is-3">Contact</h3>
             <div class="columns">
@@ -204,9 +247,6 @@
                     <p>LinkedIn: <a href="https://www.linkedin.com/in/donnacha-purcell/" target="_blank">LinkedIn Profile</a></p>
                     <p>GitHub: <a href="https://github.com/donnachapurcell20" target="_blank">GitHub Profile</a></p>
                     <p>YouTube: <a href="https://www.youtube.com/channel/UCalerSdg8enAHzG9M1khfrg?sub_confirmation=1" target="_blank">YouTube Channel</a></p>
-                </div>
-                <div class="column is-half">
-                    <img src="images/profile.jpg">
                 </div>
             </div>
         </div>
@@ -220,5 +260,36 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        const arrow = document.querySelector('.scroll-down-arrow');
+        
+        arrow.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetSection = document.querySelector('#about-section');
+          const offsetTop = targetSection.getBoundingClientRect().top + window.pageYOffset;
+          const duration = 500; // in milliseconds
+        
+          // Smooth scrolling
+          const start = window.pageYOffset;
+          const startTime = performance.now();
+        
+          const easeInOutQuad= (t, b, c, d) => {
+            t /= d/2;
+            if (t < 1) return c/2*t*t + b;
+            t--;
+            return -c/2 * (t*(t-2) - 1) + b;
+          };
+        
+          const animateScroll = (currentTime) => {
+            const timeElapsed = currentTime - startTime;
+            const newPosition = easeInOutQuad(timeElapsed, start, offsetTop - start, duration);
+            window.scrollTo(0, newPosition);
+            if (timeElapsed < duration) requestAnimationFrame(animateScroll);
+          };
+        
+          requestAnimationFrame(animateScroll);
+        });
+        </script>
 </body>
 </html>
