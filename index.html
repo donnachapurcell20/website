@@ -5,49 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3s4Wz6iJgD/+ub2oU" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .hero {
-            background-image: url('background.jpg');
-            background-size: cover;
-            color: white;
-        }
-        .hero .hero-body {
-            background-color: rgba(0, 0, 0, 0.5);
-            position: relative;
-        }
-        .project img {
-            max-height: 200px;
-            object-fit: cover;
-        }
-
-        .scroll-down-arrow {
-  display: inline-block;
-  position: relative;
-  bottom: 5px;
-}
-
-.scroll-down-arrow::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid white;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-section {
-  transition: all 0.5s ease-out;
-}
-    </style>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <link href="script.js">
     
 </head>
-<body>
+<body style="background-color: lightgray;">
     <!-- Header -->
     <section class="hero is-dark is-fullheight">
     <div class="hero-body">
@@ -59,7 +22,6 @@ section {
                 Software Engineer
                 <div class="mt-2">
                     <a id="scroll-down-arrow" class="scroll-down-arrow" href="#about-section">
-                        <i class="fas fa-arrow-down"></i>
                     </a>
                 </div>
             </h2>
@@ -96,7 +58,7 @@ section {
     </section>
 
     <!-- Skills Section -->
-    <section class="section has-background-light" id="languages">
+    <section class="section has-background-gray" id="languages">
         <div class="container">
             <h3 class="title is-3">Languages I speak</h3>
             <div class="columns is-multiline">
@@ -236,7 +198,7 @@ section {
     </section>
 
     <!-- Contact Section -->
-    <section class="section has-background-light" id="contact">
+    <section class="section has-background-gray" id="contact">
         <div class="container">
             <h3 class="title is-3">Contact</h3>
             <div class="columns">
@@ -253,7 +215,7 @@ section {
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" style="background-color: lightgray;">
         <div class="content has-text-centered">
             <p>
                 <strong>Powered By:</strong> <span>My Bank Account</span>
@@ -261,35 +223,6 @@ section {
         </div>
     </footer>
 
-    <script>
-        const arrow = document.querySelector('.scroll-down-arrow');
-        
-        arrow.addEventListener('click', (e) => {
-          e.preventDefault();
-          const targetSection = document.querySelector('#about-section');
-          const offsetTop = targetSection.getBoundingClientRect().top + window.pageYOffset;
-          const duration = 500; // in milliseconds
-        
-          // Smooth scrolling
-          const start = window.pageYOffset;
-          const startTime = performance.now();
-        
-          const easeInOutQuad= (t, b, c, d) => {
-            t /= d/2;
-            if (t < 1) return c/2*t*t + b;
-            t--;
-            return -c/2 * (t*(t-2) - 1) + b;
-          };
-        
-          const animateScroll = (currentTime) => {
-            const timeElapsed = currentTime - startTime;
-            const newPosition = easeInOutQuad(timeElapsed, start, offsetTop - start, duration);
-            window.scrollTo(0, newPosition);
-            if (timeElapsed < duration) requestAnimationFrame(animateScroll);
-          };
-        
-          requestAnimationFrame(animateScroll);
-        });
-        </script>
+
 </body>
 </html>
